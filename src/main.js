@@ -5,9 +5,13 @@ import { store } from './store/store'
 import App from './App.vue'
 
 Vue.use(VueRouter)
+
+Vue.filter('currency', (value) => {
+  return '$' + value.toLocaleString()
+})
 const router = new VueRouter({
   routes,
-  mode: 'history' 
+  mode: 'history'
 })
 
 new Vue({

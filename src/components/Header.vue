@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <router-link to="/" class="navbar-brand"> StockTrader </router-link> 
+        <router-link to="/" class="navbar-brand"> StockTrader </router-link>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -13,14 +13,14 @@
           <router-link to='/stocks' tag='li' activeClass='active'> <a> Stocks </a> </router-link>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <p class="navbar-text"> Funds: {{ funds }}</p>
+          <p class="navbar-text"> Funds: {{ funds | currency }}</p>
           <li><a href="#"> End Days</a></li>
           <li class="dropdown">
-            <a href="#" 
+            <a href="#"
               class="dropdown-toggle"
-              data-toggle="dropdown" 
-              role="button" 
-              aria-haspopup="true" 
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
               aria-expanded="false">Save & Load <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Save data</a></li>
