@@ -14,8 +14,9 @@
             >
         </div>
         <div class="pull-right">
-          <button class="btn btn-success" @click="buyStock" :disabled="quantity <= 0 || !Number.isInteger(Number(quantity))">
-            Buy
+          <button class="btn btn-success" 
+            @click="buyStock" 
+            :disabled="quantity <= 0 || !Number.isInteger(Number(quantity))"> Buy
           </button>
         </div>
       </div>

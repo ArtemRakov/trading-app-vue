@@ -13,6 +13,7 @@
           <router-link to='/stocks' tag='li' activeClass='active'> <a> Stocks </a> </router-link>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+          <p class="navbar-text"> Funds: {{ funds }}</p>
           <li><a href="#"> End Days</a></li>
           <li class="dropdown">
             <a href="#" 
@@ -34,7 +35,11 @@
 
 <script>
 export default {
-
+  computed: {
+    funds() {
+      return this.$store.getters.funds
+    }
+  }
 }
 </script>
 
