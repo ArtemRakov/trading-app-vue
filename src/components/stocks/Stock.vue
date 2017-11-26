@@ -6,7 +6,7 @@
       </div>
       <div class="panel-body">
         <div class="pull-left">
-          <input 
+          <input
             type="number"
             class="form-control"
             placeholder="Quantity"
@@ -15,8 +15,8 @@
             >
         </div>
         <div class="pull-right">
-          <button class="btn btn-success" 
-            @click="buyStock" 
+          <button class="btn btn-success"
+            @click="buyStock"
             :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(Number(quantity))"> {{insufficientFunds ? 'Insuffecient Funds' : 'Buy'}}
           </button>
         </div>
@@ -45,14 +45,14 @@ export default {
       const order = {
         stockId: this.stock.id,
         stockPrice: this.stock.price,
-        quantity: this.quantity
+        quantity: Number(this.quantity)
       };
       this.$store.dispatch('buyStock', order)
       this.quantity = 0;
     }
   },
   props: ["stock"]
-  
+
 }
 </script>
 

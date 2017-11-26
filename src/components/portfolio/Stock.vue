@@ -6,7 +6,7 @@
       </div>
       <div class="panel-body">
         <div class="pull-left">
-          <input 
+          <input
             type="number"
             class="form-control"
             placeholder="Quantity"
@@ -15,8 +15,8 @@
             >
         </div>
         <div class="pull-right">
-          <button class="btn btn-success" 
-            @click="sellStock" 
+          <button class="btn btn-success"
+            @click="sellStock"
             :disabled="insufficientQuantity || quantity <= 0 || !Number.isInteger(Number(quantity))"> {{insufficientQuantity ? "Not enough" : "Sell"}}
           </button>
         </div>
@@ -42,7 +42,7 @@ export default {
       const order = {
         stockId: this.stock.id,
         stockPrice: this.stock.price,
-        quantity: this.quantity
+        quantity: Number(this.quantity)
       };
       this.placeSellOrder(order)
       this.quantity = 0
