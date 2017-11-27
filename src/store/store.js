@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import stocks from './modules/stoke'
+import stocks from './modules/stock'
 import portfolio from './modules/portfolio'
 import * as actions from './actions'
 

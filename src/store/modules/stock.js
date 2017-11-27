@@ -1,4 +1,4 @@
-import stocks from '../../data/stoke';
+import stocks from '../../data/stock';
 
 const state = {
   stocks: []
