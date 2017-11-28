@@ -8,7 +8,7 @@ import App from './App.vue'
 Vue.use(VueRouter)
 Vue.use(VueResource)
 
-Vue.http.options.root = ''
+Vue.http.options.root = 'https://vuejs-stock-trader-f2ed0.firebaseio.com/'
 
 Vue.filter('currency', (value) => {
   return '$' + value.toLocaleString()
